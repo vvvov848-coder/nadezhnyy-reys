@@ -8,180 +8,196 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-
-/* Плавный скролл */
-html {
-    scroll-behavior: smooth;
-}
-
-* {
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+html { scroll-behavior: smooth;}
+* { margin:0; padding:0; box-sizing:border-box;}
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background:#0f172a;
-    color:white;
+ font-family: 'Montserrat', sans-serif;
+ background:#0f172a;
+ color:white;
 }
 
 /* HEADER */
 header {
-    position:fixed;
-    width:100%;
-    top:0;
-    background:rgba(0,0,0,0.85);
-    padding:15px 20px;
-    z-index:1000;
+ position:fixed;
+ width:100%;
+ top:0;
+ background:rgba(0,0,0,0.9);
+ padding:15px 20px;
+ z-index:1000;
+ backdrop-filter: blur(10px);
 }
 
 nav {
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
+ display:flex;
+ justify-content:space-between;
+ align-items:center;
+ flex-wrap:wrap;
 }
 
 nav h1 {
-    color:orange;
-    font-size:22px;
+ color:orange;
+ font-size:22px;
 }
 
 nav a {
-    color:white;
-    text-decoration:none;
-    margin-left:15px;
-    font-size:14px;
+ color:white;
+ text-decoration:none;
+ margin-left:15px;
+ font-size:14px;
+ transition:0.3s;
 }
+
+nav a:hover { color:orange; }
 
 /* HERO */
 .hero {
-    height:100vh;
-    padding-top:80px;
-    background:
-    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
-    url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d') center/cover;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
+ height:100vh;
+ padding-top:80px;
+ background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+ url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d') center/cover;
+ display:flex;
+ justify-content:center;
+ align-items:center;
+ text-align:center;
 }
 
-.hero h2 {
-    font-size:42px;
-    margin-bottom:10px;
-}
-
-.hero p {
-    font-size:18px;
-}
+.hero h2 { font-size:42px; }
+.hero p { font-size:18px; }
 
 .btn {
-    display:inline-block;
-    margin-top:20px;
-    padding:15px 25px;
-    background:orange;
-    border-radius:10px;
-    text-decoration:none;
-    color:black;
-    font-weight:bold;
+ display:inline-block;
+ margin-top:20px;
+ padding:15px 25px;
+ background:orange;
+ border-radius:10px;
+ text-decoration:none;
+ color:black;
+ font-weight:bold;
+ transition:0.3s;
+}
+
+.btn:hover {
+ transform: translateY(-6px);
+ box-shadow: 0 10px 25px rgba(255,165,0,0.5);
 }
 
 /* SECTION */
 .section {
-    padding:80px 20px;
-    text-align:center;
-}
-
-.section h2 {
-    margin-bottom:30px;
+ padding:80px 20px;
+ text-align:center;
 }
 
 /* CARDS */
 .cards {
-    display:flex;
-    justify-content:center;
-    gap:20px;
-    flex-wrap:wrap;
+ display:flex;
+ justify-content:center;
+ gap:20px;
+ flex-wrap:wrap;
 }
 
 .card {
-    background:#1e293b;
-    padding:20px;
-    border-radius:12px;
-    width:250px;
+ background:#1e293b;
+ padding:20px;
+ border-radius:12px;
+ width:250px;
+ transition:0.3s;
 }
 
-/* GALLERY */
-.gallery {
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-    justify-content:center;
-    margin-top:30px;
+.card:hover {
+ transform: translateY(-10px);
+ box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
-.gallery img {
-    width:300px;
-    border-radius:10px;
+/* ⭐ ОТЗЫВЫ */
+.reviews {
+ display:flex;
+ gap:20px;
+ flex-wrap:wrap;
+ justify-content:center;
+ margin-top:30px;
+}
+
+.review {
+ background:#1e293b;
+ padding:20px;
+ border-radius:12px;
+ width:280px;
+ text-align:left;
+ box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+ transition:0.3s;
+}
+
+.review:hover {
+ transform: translateY(-8px);
+}
+
+.review span {
+ color:orange;
+ font-size:18px;
+}
+
+/* MAP */
+.map-box {
+ max-width:900px;
+ margin:30px auto 0;
+ border-radius:15px;
+ overflow:hidden;
+ box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.map-box iframe {
+ width:100%;
+ height:300px;
+ border:none;
 }
 
 /* CONTACT */
 .contact a {
-    display:inline-block;
-    margin:10px;
-    padding:12px 20px;
-    border-radius:8px;
-    text-decoration:none;
-    color:white;
+ display:inline-block;
+ margin:10px;
+ padding:12px 20px;
+ border-radius:8px;
+ text-decoration:none;
+ color:white;
+ transition:0.3s;
 }
 
 .call { background:#ef4444; }
 .tg { background:#229ED9; }
 .viber { background:#7360f2; }
 
-/* MAP */
-.map iframe {
-    width:100%;
-    height:350px;
-    border:none;
+.contact a:hover {
+ transform: translateY(-6px);
 }
 
 /* FOOTER */
 footer {
-    background:black;
-    padding:20px;
-    text-align:center;
+ background:black;
+ padding:20px;
+ text-align:center;
 }
 
-/* 📱 АДАПТАЦИЯ */
+/* FLOAT BTN */
+.float {
+ position: fixed;
+ bottom: 20px;
+ right: 20px;
+ background: #229ED9;
+ color: white;
+ padding: 15px;
+ border-radius: 50%;
+ font-size: 22px;
+ text-decoration: none;
+}
+
+/* MOBILE */
 @media (max-width:768px){
-
-.hero h2 {
-    font-size:26px;
+ .hero h2 { font-size:26px; }
+ .hero p { font-size:14px; }
+ nav { flex-direction:column; gap:10px; }
+ .cards { flex-direction:column; align-items:center; }
 }
-
-.hero p {
-    font-size:14px;
-}
-
-nav {
-    flex-direction:column;
-    gap:10px;
-}
-
-.cards {
-    flex-direction:column;
-    align-items:center;
-}
-
-.gallery img {
-    width:90%;
-}
-
-}
-
 </style>
 </head>
 
@@ -189,28 +205,25 @@ nav {
 
 <header>
 <nav>
-<h1> Надежный рейс</h1>
+<h1>Надежный рейс</h1>
 <div>
 <a href="#services">Услуги</a>
-<a href="#gallery">Фото</a>
+<a href="#reviews">Отзывы</a>
 <a href="#contact">Контакты</a>
 </div>
 </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
 <div>
 <h2>Профессиональные грузчики в Днепре</h2>
-<p>Работаем по всему городу • Быстро • Аккуратно</p>
+<p>Быстро • Аккуратно • Без повреждений</p>
 <a href="#contact" class="btn">Заказать</a>
 </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="section">
 <h2>Наши услуги</h2>
-
 <div class="cards">
 <div class="card">📦 Грузчики<br><br>Перенос мебели и техники</div>
 <div class="card">🚛 Переезды<br><br>Квартиры и офисы</div>
@@ -218,38 +231,55 @@ nav {
 </div>
 </section>
 
-<!-- GALLERY -->
-<section id="gallery" class="section">
-<h2>Наши работы</h2>
+<!-- ⭐ ОТЗЫВЫ -->
+<section id="reviews" class="section">
+<h2>Отзывы клиентов</h2>
 
-<div class="gallery">
-<img src="img1.jpg">
-<img src="img2.jpg">
+<div class="reviews">
+
+<div class="review">
+<span>★★★★★</span>
+<p>Перевозили квартиру. Приехали вовремя, всё аккуратно упаковали. Ничего не поцарапали. Рекомендую.</p>
+<br><b>— Андрей, Днепр</b>
+</div>
+
+<div class="review">
+<span>★★★★★</span>
+<p>Заказывал грузчиков на офисный переезд. Сделали всё быстро, без лишних разговоров. Цена как договаривались.</p>
+<br><b>— Максим</b>
+</div>
+
+<div class="review">
+<span>★★★★☆</span>
+<p>Нормальные ребята, помогли занести технику на 9 этаж без лифта. Всё целое.</p>
+<br><b>— Ирина</b>
+</div>
+
 </div>
 </section>
 
 <!-- MAP -->
-<section class="section map">
+<section class="section">
 <h2>Работаем по всему Днепру</h2>
+
+<div class="map-box">
 <iframe src="https://www.google.com/maps?q=Днепр&output=embed"></iframe>
+</div>
+
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="section contact">
 <h2>Связаться с нами</h2>
-
 <p>📞 +380933102110</p>
-<p>👤 Строкольцев Илья</p>
+<p>👤 Старокольцев Илья</p>
 
 <a class="call" href="tel:+380933102110">Позвонить</a>
 <a class="tg" href="https://t.me/managerrdp">Telegram</a>
 <a class="viber" href="viber://chat?number=+380933102110">Viber</a>
-
 </section>
 
-<footer>
-© 2026 Надежный рейс
-</footer>
+<footer>© 2026 Надежный рейс</footer>
 
+<a href="https://t.me/managerrdp" class="float">💬</a>
 </body>
 </html>
